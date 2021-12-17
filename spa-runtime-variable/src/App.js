@@ -13,7 +13,7 @@ function App() {
         <h1>{RUNTIME_ENV_KEY}</h1>
         <a
           className="App-link"
-          href="https://dev.to/an1meshk/react-runtime-variables-49dc"
+          href="https://dev.to/akdevcraft/single-page-app-runtime-environment-variables-10dl"
           target="_blank"
           rel="noopener noreferrer"
         >
