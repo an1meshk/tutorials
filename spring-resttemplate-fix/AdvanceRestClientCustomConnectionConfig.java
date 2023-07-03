@@ -27,16 +27,16 @@ public class AdvanceRestClientCustomConnectionConfig {
         RequestConfig reqConfig = RequestConfig.custom()
                                   .setConnectionRequestTimeout(4000) //in milliseconds
                                   .setConnectionTimeout(4000)
-                                  .setsocketTimeout(4000)
+                                  .setSocketTimeout(4000)
                                   .build();
 
-        HttpClientBuilder builder = HttpClientBuilder.create()
+        HttpClientBuilder clientBuilder = HttpClientBuilder.create()
                                   .setConnectionManager(customizedPoolingHtppClientConnectionManager)
                                   .setConnectionManagerShared(true)  //this is important to set as true in case of more than one downstream APIs as we want to set a common HTTP connection pool
                                   .setDefaultRequestConfig(reqConfig);
 
         HttpComponentsClientHttpRequestFactory reqFactor = new HttpComponentsClientHttpRequestFactory();
-        reqFactor.setHttpClient(builder.build();
+        reqFactor.setHttpClient(clientBuilder.build();
       
         return new RestTemplate(reqFactor);
     }
