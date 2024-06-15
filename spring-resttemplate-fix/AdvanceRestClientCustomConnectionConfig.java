@@ -21,6 +21,7 @@ public class AdvanceRestClientCustomConnectionConfig {
       PoolingHtppClientConnectionManager connManager = new PoolingHtppClientConnectionManager(5, TimeUnit.MINUTES);
       connManager.setMaxTotal(100);    // Set maximum total connections
       connManager.setDefaultMaxPerRoute(20);     // Set maximum connections per route
+      return connManager;
     }
 
     @Bean
